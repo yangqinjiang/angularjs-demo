@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<body>
+<div ng-controller="ServiceController">
+	<label for="username">Type in a GitHub username</label>
+	<input type="text" ng-model="username" placeholder="Enter a GitHub username, like auser" />
+  <pre ng-show="username">{{events}}</pre>
+</div>
+    <script type="text/javascript" src="js/angular-1.3.0.js"></script>
+    <script type="text/javascript" src="js/angular-resource.min.js"></script>
+    <script type="text/javascript" src="js/service.js"></script>
+</body>
+
+</html>
