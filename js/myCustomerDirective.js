@@ -35,4 +35,21 @@ angular.module('docsSimpleDirective',[]).controller('Ctrl', ['$scope', function(
 		restrict:'E',
 		templateUrl:'product_list.html'
 	};
-});
+}).directive('myIsolateScope',function () {//给指令一个独立作用域(isolate scope)
+	return {
+		restrict:'E',
+		scope:{
+			customerInfo:'=info'
+		},
+		templateUrl:'my-customer-iso.html'
+	};
+}).controller('IsolateCtrl', ['$scope', function($scope){
+	$scope.naomi={
+		name:'Naomi',
+		address:'1600 Amphitheatre'
+	};
+	$scope.igor={
+		name:'igor',
+		address:'123 Amphitheatre'
+	};
+}]);
